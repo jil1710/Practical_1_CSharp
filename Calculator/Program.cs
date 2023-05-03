@@ -41,7 +41,11 @@
             Console.ForegroundColor= ConsoleColor.Cyan;
             Console.Write(" Do you want to continue [ y/n ] : ");
             restart = Console.ReadKey(true).KeyChar;
-        } while (restart == 'y');
+            if(restart == 'n')
+            {
+                break;
+            }
+        } while (restart == 'y' || restart!='n');
 
         Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine("\n\n Thank you! Have a nice day.");
